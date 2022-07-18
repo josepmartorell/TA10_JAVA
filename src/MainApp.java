@@ -3,7 +3,7 @@ import javax.swing.JOptionPane;
 public class MainApp {
 
 	/**
-	 * Metodo main que llama al menu principal
+	 * Main method that calls the main menu
 	 * 
 	 * @param args
 	 */
@@ -12,19 +12,18 @@ public class MainApp {
 	}
 
 	/**
-	 * Menu inicial
+	 * Initial menu
 	 */
 	public static void initializeMenu() {
 
 		// Mensaje con las diferentes opciones del menu
-		final String menuOpciones = "Elija una opcion." + "\n1 - Aplicacion" + "\n2 - Aplicacion"
-				+ "\n3 - Aplicacion" + "\n4 - Aplicacion" + "\n5 - Aplicacion" + "\n0 - SALIR";
-		String opcion = "";
+		final String menuOpciones = "Choose an option." + "\n1 - App" + "\n0 - EXIT";
+		String option = "";
 
 		// Bucle infinito del menu hasta que se cierre con el Exit o cancelando
 		do {
-			opcion = JOptionPane.showInputDialog(menuOpciones);
-			switch (opcion) {
+			option = JOptionPane.showInputDialog(menuOpciones);
+			switch (option) {
 			case "0":
 				JOptionPane.showMessageDialog(null, "FIN DE PROGRAMA");
 				break;
@@ -44,10 +43,10 @@ public class MainApp {
 				// TODO
 				break;
 			default:
-				JOptionPane.showMessageDialog(null, "Opcion incorrecta");
+				JOptionPane.showMessageDialog(null, "Wrong option");
 			}
 
-		} while (!opcion.equals("0"));
+		} while (!option.equals("0"));
 		
 	}	
 	
