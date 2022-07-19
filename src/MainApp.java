@@ -2,6 +2,8 @@ import javax.swing.JOptionPane;
 
 import ExceptionsTA10.*;
 import aplicacion_02.Ex2;
+import aplicacion_04.Calculator;
+import aplicacion_05.Password;
 
 
 public class MainApp {
@@ -23,7 +25,7 @@ public class MainApp {
 	public static void initializeMenu() throws ExceptionEx2 {
 
 		// Menu options
-		final String menuOptions = "Choose an Exercise from TA10 or 0 to exit:" + "\n1 - First Exercise" + "\n2 - Second Exercise" + "\n0 - EXIT";
+		final String menuOptions = "Choose an Exercise from TA10 or 0 to exit:" + "\n1 - First Exercise" + "\n2 - Second Exercise" + "\n3 - Third Exercise" + "\n4 - Fourth Exercise" +  "\n5 - Fifth Exercise" + "\n0 - EXIT";
 		String option = "";
 
 		// Infinite iteration of the menu until its closed with Exit
@@ -40,13 +42,13 @@ public class MainApp {
 				Exercise2Test();
 				break;
 			case "3":
-				// TODO
+				//TODO
 				break;
 			case "4":
-				// TODO
+				Exercise4Test();
 				break;
 			case "5":			
-				// TODO
+				Exercise5Test();
 				break;
 			default:
 				JOptionPane.showMessageDialog(null, "Wrong option.");
@@ -70,5 +72,30 @@ public class MainApp {
 		
 		// We test the value and show a message
 		ex2.testValue();
+	}
+	
+	public static void Exercise4Test() {
+		
+		Calculator calc = new Calculator();
+        try {
+            calc.executeCalc();
+        }catch(Exception e) {
+            // We catch the exception
+            System.out.println(e.getMessage());
+        } finally {
+            // Whatever happens we show an end message
+            System.out.println("End of the calculator.");
+        }
+		
+	}
+	
+	public static void Exercise5Test() {
+		// instantiate the password class
+		Password password = new Password(12);
+		// we show the randomly generated password in a dialog box
+		JOptionPane.showMessageDialog(null, password);
+		// 
+		
+		
 	}
 }
