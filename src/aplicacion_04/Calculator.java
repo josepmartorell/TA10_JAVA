@@ -1,6 +1,8 @@
 // Package
 package aplicacion_04;
 
+import javax.swing.JOptionPane;
+
 // Imports
 
 // Class
@@ -13,30 +15,25 @@ public class Calculator {
 	}
 	
 	public double sum(double a, double b) {
+		result = a + b;
 		return result;
 	}
 	
-	public double rest() {
+	public double rest(double a, double b) {
+		result = a - b;
 		return result;
 	}
 	
-	public double multiplication() {
+	public double multiplication(double a, double b) {
+		result = a * b;
 		return result;
 	}
 	
-	public double division() {
+	public double division(double a, double b) {
+		result = a / b;
 		return result;
 	}
 	
-	public double squareRoot() {
-		return result;
-	}
+	public void executeCalc() {}
 	
-	public double cubicRoot() {
-		return result;
-	}
-	
-	public double potency() {
-		return result;
-	}
 }
