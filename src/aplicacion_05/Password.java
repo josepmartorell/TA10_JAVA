@@ -87,15 +87,32 @@ public class Password {
 	 * @return
 	 */
 	public boolean isStrong(String pass) {
-		
-		for(int i=0; i<pass.length(); i++) {
-			char c = pass.charAt(i);
+		// We initialize a counter for each condition and a boolean
+		boolean strong = false;
+		int countUpper = 0;
+		int countLower = 0;
+		int countNumbers = 0;
+		int i = 0;
+		while(i<pass.length() && strong==false) {
+			// First we check for uppercase letter
+			if(Character.isUpperCase(pass.charAt(i))) {
+				countUpper++;
+			} else if (Character.isDigit(pass.charAt(i))) {
+				// Then we check for number
+				countNumbers++;
+			} else if (Character.isLowerCase(pass.charAt(i))) {
+				// And for lowercase char
+				countLower++;
+			}
 			
+			// If we have all the conditions for strong pass we change the boolean
+			if((countUpper>=2) && (countNumbers>=5) && (countLower>=1)) {
+				strong = true;
+			}
+			
+			i++;
 		}
-		
-		
-		
-		return false;
+		return strong;
 	}
 	
 	
