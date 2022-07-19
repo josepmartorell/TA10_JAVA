@@ -16,16 +16,16 @@ public class MainApp {
 	 */
 	public static void initializeMenu() {
 
-		// Mensaje con las diferentes opciones del menu
-		final String menuOpciones = "Choose an option." + "\n1 - App" + "\n0 - EXIT";
+		// Menu options
+		final String menuOptions = "Choose an option." + "\n1 - First App" + "\n0 - EXIT";
 		String option = "";
 
-		// Bucle infinito del menu hasta que se cierre con el Exit o cancelando
+		// Infinite iteration of the menu until its closed with Exit
 		do {
-			option = JOptionPane.showInputDialog(menuOpciones);
+			option = JOptionPane.showInputDialog(menuOptions);
 			switch (option) {
 			case "0":
-				JOptionPane.showMessageDialog(null, "FIN DE PROGRAMA");
+				JOptionPane.showMessageDialog(null, "End of the program.");
 				break;
 			case "1":
 				// TODO
