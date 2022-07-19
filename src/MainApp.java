@@ -1,11 +1,13 @@
 import javax.swing.JOptionPane;
 
+
 public class MainApp {
 
 	/**
 	 * Main method that calls the main menu
 	 * 
 	 * @param args
+	 * @throws ExceptionEx2 
 	 */
 	public static void main(String[] args) {
 		initializeMenu();
@@ -17,7 +19,7 @@ public class MainApp {
 	public static void initializeMenu() {
 
 		// Menu options
-		final String menuOptions = "Choose an option." + "\n1 - First App" + "\n0 - EXIT";
+		final String menuOptions = "Choose an Exercise from TA10 or 0 to exit:" + "\n1 - First Exercise" + "\n2 - Second Exercise" + "\n0 - EXIT";
 		String option = "";
 
 		// Infinite iteration of the menu until its closed with Exit
@@ -43,11 +45,10 @@ public class MainApp {
 				// TODO
 				break;
 			default:
-				JOptionPane.showMessageDialog(null, "Wrong option");
+				JOptionPane.showMessageDialog(null, "Wrong option.");
 			}
 
 		} while (!option.equals("0"));
 		
-	}	
-	
+	}
 }
