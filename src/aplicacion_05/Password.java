@@ -1,6 +1,7 @@
 // Package
 package aplicacion_05;
 
+// Imports
 import java.security.SecureRandom;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
