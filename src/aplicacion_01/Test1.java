@@ -2,6 +2,8 @@ package aplicacion_01;
 
 import javax.swing.JOptionPane;
 
+import ExceptionsTA10.ExceptionEx2;
+
 public class Test1 {
 	
 	private boolean gate;
@@ -12,8 +14,7 @@ public class Test1 {
 		this.attempts = 0;
 	}
 	
-	public void guessTheNumberGame() {
-		// TODO
+	public void guessTheNumberGame() throws ExceptionEx2 {
 		
 		do {
 			// WE GENERATE A RANDOM NUMBER BETWEEN 1 AND 500
@@ -31,9 +32,11 @@ public class Test1 {
 				if (userData != null) {			 
 					parsedData = Integer.parseInt(userData);				
 				} else {
-					System.exit(0);
+					throw new ExceptionEx2("2");
 				};
 			} catch (NumberFormatException e) {
+				JOptionPane.showMessageDialog(null, e, "I CATCH YOU!", JOptionPane.ERROR_MESSAGE);
+			} catch (ExceptionEx2 e) {
 				JOptionPane.showMessageDialog(null, e, "I CATCH YOU!", JOptionPane.ERROR_MESSAGE);
 			}
 						

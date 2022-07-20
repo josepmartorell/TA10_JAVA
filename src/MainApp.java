@@ -2,6 +2,7 @@
 import javax.swing.*;
 
 import ExceptionsTA10.*;
+import aplicacion_01.Test1;
 import aplicacion_02.Ex2;
 import aplicacion_03.ExceptionsTest;
 import aplicacion_04.Calculator;
@@ -40,13 +41,13 @@ public class MainApp {
 				JOptionPane.showMessageDialog(null, "End of the program.");
 				break;
 			case "1":
-				// TODO
+				Exercise1Test();
 				break;
 			case "2":
 				Exercise2Test();
 				break;
 			case "3":
-				// TODO
+				Exercise3Test();
 				break;
 			case "4":
 				Exercise4Test();
@@ -60,6 +61,15 @@ public class MainApp {
 
 		} while (!option.equals("0"));
 
+	}
+	
+	/**
+	 * This method tests the first exercise of the task
+	 * @throws ExceptionEx2 
+	 */
+	public static void Exercise1Test() throws ExceptionEx2 {
+		Test1 test = new Test1();
+		test.guessTheNumberGame();
 	}
 
 	/**

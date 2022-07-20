@@ -15,8 +15,11 @@ public class ExceptionEx2 extends Exception {
 
     public String getMessage() {
     	switch (code) {
-        case "1":
+    	case "1":
             this.message = "This is an object Exception";
+            break;
+    	case "2":
+            this.message = "InputMismatchException";
             break;
         default:
             this.message = "Unknown error";
