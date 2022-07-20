@@ -1,7 +1,7 @@
 package aplicacion_03;
 
 import javax.swing.JOptionPane;
-import myexception.MyException;
+import ExceptionsTA10.*;
 
 public class ExceptionsTest {
 	
