@@ -130,6 +130,7 @@ public class MainApp {
 
 		// we declare an array to store random generated passwords with the above data
 		Password[] array = new Password[parsedData1];
+		// saving in another array if those passwords are strong or weak through booleans
 		Boolean[] arrayBooleans = new Boolean[parsedData1];
 		String valor = "";
 		for (int i = 0; i < array.length; i++) {
@@ -140,7 +141,6 @@ public class MainApp {
 			}else {
 				valor += "Password: " + array[i].getPass() + " | Weak\n";
 			}
-			System.out.println("SYSO: " + array[i]);
 		}
 		
 		JOptionPane.showMessageDialog(null, valor);
