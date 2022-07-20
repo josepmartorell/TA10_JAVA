@@ -104,7 +104,7 @@ public class MainApp {
 		Password password = new Password(12);
 
 		// we show the randomly generated password in a dialog box
-		JOptionPane.showMessageDialog(null, password);
+		JOptionPane.showMessageDialog(null, password.getPass());
 
 		// we ask the user to enter the size of an array and the length of the passwords
 		// that we will store
@@ -130,11 +130,20 @@ public class MainApp {
 
 		// we declare an array to store random generated passwords with the above data
 		Password[] array = new Password[parsedData1];
+		Boolean[] arrayBooleans = new Boolean[parsedData1];
+		String valor = "";
 		for (int i = 0; i < array.length; i++) {
 			array[i] = new Password(parsedData2);
+			arrayBooleans[i] = array[i].isStrong(array[i].getPass());
+			if(arrayBooleans[i]) {
+				valor += "Password: " + array[i].getPass() + " | Strong\n";
+			}else {
+				valor += "Password: " + array[i].getPass() + " | Weak\n";
+			}
 			System.out.println("SYSO: " + array[i]);
 		}
-
+		
+		JOptionPane.showMessageDialog(null, valor);
 	}
 
 }
