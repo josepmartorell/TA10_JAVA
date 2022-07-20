@@ -16,7 +16,6 @@ public class ExceptionsTest {
 	public void randomNumber() {
 		
 		boolean gate = false;
-		String message = "";
 		
 		do {			
 			// WE GENERATE A RANDOM NUMBER BETWEEN 0 AND 999
@@ -34,7 +33,7 @@ public class ExceptionsTest {
 				}
 				
 			} catch(MyException e){
-	            JOptionPane.showMessageDialog(null, e);
+	            JOptionPane.showMessageDialog(null, e.getMessage());
 			}
 							
 		} while (gate != false);

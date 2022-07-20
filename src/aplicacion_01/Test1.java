@@ -4,10 +4,16 @@ import javax.swing.JOptionPane;
 
 public class Test1 {
 	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		boolean gate = true;
-		int attempts = 0;
+	private boolean gate;
+	private int attempts;
+
+	public Test1() {
+		this.gate = true;
+		this.attempts = 0;
+	}
+	
+	public void guessTheNumberGame() {
+		// TODO
 		
 		do {
 			// WE GENERATE A RANDOM NUMBER BETWEEN 1 AND 500
@@ -17,33 +23,32 @@ public class Test1 {
 			
 			// THE PROGRAM ASKS FOR THE SECRET NUMBER THROUGH AN EMERGING WINDOW
 			String userData = "";
-			int parsedData = 0;
 			userData = JOptionPane.showInputDialog(null, "GUESS THE SECRET NUMBER", "Please enter a number");
 			
 			// DATA VALIDATION NUMBER FORMAT
+			int parsedData = 0;
 			try {
 				if (userData != null) {			 
 					parsedData = Integer.parseInt(userData);				
-				}else {
+				} else {
 					System.exit(0);
 				};
-				
 			} catch (NumberFormatException e) {
 				JOptionPane.showMessageDialog(null, e, "I CATCH YOU!", JOptionPane.ERROR_MESSAGE);
 			}
 						
 			// SHOWS A MESSAGE INDICATING WHETHER THE HIGHEST OR LOWEST AND IF CORRECT SHOWS THE NUMBER OF ATTEMPTS
-			attempts++;
+			this.attempts++;
 			if (parsedData == secretNumber) {
 				JOptionPane.showMessageDialog(null, "Correct number!", "ATTEMPTS: "+attempts, JOptionPane.INFORMATION_MESSAGE);
-				gate = false;
+				this.gate = false;
 			}else if (parsedData != secretNumber) {
 				JOptionPane.showMessageDialog(null, "Wrong number, try again!", "ATTEMPTS: "+attempts, JOptionPane.INFORMATION_MESSAGE);
 			} else {
 
 			}
 			
-		} while (gate != false);
+		} while (this.gate != false);
 
 	}
 
