@@ -5,8 +5,16 @@ import ExceptionsTA10.*;
 
 public class ExceptionsTest {
 	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	/**
+	 * Default constructor
+	 */
+	public ExceptionsTest() {}
+	
+	/**
+	 * Generate random number and checks if its even or odd
+	 */
+	public void randomNumber() {
+		
 		boolean gate = false;
 		String message = "";
 		
@@ -33,7 +41,13 @@ public class ExceptionsTest {
 
 	}
 	
-	public static boolean isEven(int num) {
+	/**
+	 * Check if its even or odd
+	 * 
+	 * @param num
+	 * @return
+	 */
+	public boolean isEven(int num) {
 	    if (num % 2 == 0) {
 	        return true;
 	    } else {

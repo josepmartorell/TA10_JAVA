@@ -3,6 +3,7 @@ import javax.swing.*;
 
 import ExceptionsTA10.*;
 import aplicacion_02.Ex2;
+import aplicacion_03.ExceptionsTest;
 import aplicacion_04.Calculator;
 import aplicacion_05.Password;
 
@@ -76,6 +77,14 @@ public class MainApp {
 
 		// We test the value and show a message
 		ex2.testValue();
+	}
+	
+	/**
+	 * This method tests the third exercise of the task
+	 */
+	public static void Exercise3Test() {
+		ExceptionsTest test = new ExceptionsTest();
+		test.randomNumber();
 	}
 
 	/**
